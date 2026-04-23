@@ -609,11 +609,11 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0xd7e
+.debug_info     0x0000000000000000      0xd91
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
- .debug_info    0x00000000000005f4       0x6e build/default/debug/displaycomm.o
- .debug_info    0x0000000000000662      0x71c build/default/debug/main.o
+ .debug_info    0x00000000000005f4       0x7c build/default/debug/displaycomm.o
+ .debug_info    0x0000000000000670      0x721 build/default/debug/main.o
 
 .debug_abbrev   0x0000000000000000      0x6c5
  *(.debug_abbrev)
