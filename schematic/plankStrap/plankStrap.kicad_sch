@@ -774,6 +774,16 @@
 		)
 		(uuid d781bc94-e38c-4bfd-999c-eb5f7af6111b)
 	)
+	(text "Output in Eueler angles"
+		(exclude_from_sim no)
+		(at 216.154 38.608 0)
+		(effects
+			(font
+				(size 3 3)
+			)
+		)
+		(uuid "11670fe1-d5ab-49c4-ba51-5b6cc0ee7185")
+	)
 	(text "DIN (Data In) = MOSI"
 		(exclude_from_sim no)
 		(at 213.614 83.82 0)
@@ -888,15 +898,15 @@
 		(uuid "f794543f-6f87-4361-af23-e75be3cacdc4")
 	)
 	(no_connect
-		(at 128.27 62.23)
+		(at 125.73 58.42)
 		(uuid "01452014-50c3-4526-946e-796c22b3fa83")
 	)
 	(no_connect
-		(at 151.13 52.07)
+		(at 148.59 48.26)
 		(uuid "02df4825-9285-4490-b80d-9d13c91d8db1")
 	)
 	(no_connect
-		(at 137.16 44.45)
+		(at 134.62 40.64)
 		(uuid "3ebc7780-6c5c-4b8f-8cd4-5eb395b9c6d5")
 	)
 	(no_connect
@@ -904,11 +914,11 @@
 		(uuid "d2457059-c27e-417e-8ae4-1905fc7bd33f")
 	)
 	(no_connect
-		(at 151.13 63.5)
+		(at 148.59 59.69)
 		(uuid "e4422322-cdbc-4198-8bfb-7705d995b75a")
 	)
 	(no_connect
-		(at 151.13 55.88)
+		(at 148.59 52.07)
 		(uuid "ead86d90-de09-4fdf-a180-1f4fb9d75c39")
 	)
 	(global_label "DC"
@@ -1001,7 +1011,7 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 139.7 71.12 270)
+		(at 137.16 67.31 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1011,7 +1021,7 @@
 		)
 		(uuid "28c54a0b-d7b8-4884-a97a-07ac7a0a8c0b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 139.7 77.9757 90)
+			(at 137.16 74.1657 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1023,7 +1033,7 @@
 	)
 	(global_label "SCL"
 		(shape input)
-		(at 128.27 58.42 180)
+		(at 125.73 54.61 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1033,7 +1043,7 @@
 		)
 		(uuid "330dcb9b-336d-4b1d-a959-865f8f1ff7d0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.7772 58.42 0)
+			(at 119.2372 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1045,7 +1055,7 @@
 	)
 	(global_label "VCC"
 		(shape input)
-		(at 142.24 44.45 90)
+		(at 139.7 40.64 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1055,7 +1065,7 @@
 		)
 		(uuid "34895d0b-e5e6-46a6-a940-8db6e79c6561")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 142.24 37.8362 90)
+			(at 139.7 34.0262 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1177,7 +1187,7 @@
 	)
 	(global_label "SDA"
 		(shape input)
-		(at 128.27 54.61 180)
+		(at 125.73 50.8 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1187,7 +1197,7 @@
 		)
 		(uuid "80b00647-1bbd-4c35-9e0e-f2e43bde0914")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.7167 54.61 0)
+			(at 119.1767 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1353,7 +1363,7 @@
 	)
 	(global_label "INT to 328p(PD2)"
 		(shape input)
-		(at 151.13 59.69 0)
+		(at 148.59 55.88 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1363,7 +1373,7 @@
 		)
 		(uuid "d51f6b1d-ca09-47a9-aef5-b3e71a62e2f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.0484 59.69 0)
+			(at 168.5084 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1516,7 +1526,7 @@
 	)
 	(symbol
 		(lib_id "LCustom:Gyro_Absolute_BNO055")
-		(at 139.7 58.42 0)
+		(at 137.16 54.61 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1525,7 +1535,7 @@
 		(fields_autoplaced yes)
 		(uuid "9ac89152-32f3-426d-9a7a-f40831393bda")
 		(property "Reference" "U2"
-			(at 141.8433 71.12 0)
+			(at 139.3033 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1534,7 +1544,7 @@
 			)
 		)
 		(property "Value" "Gyro_Absolute_BNO055"
-			(at 141.8433 73.66 0)
+			(at 139.3033 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1543,7 +1553,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 139.7 58.42 0)
+			(at 137.16 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1552,7 +1562,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 58.42 0)
+			(at 137.16 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1561,7 +1571,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 139.7 58.42 0)
+			(at 137.16 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
