@@ -135,7 +135,9 @@ void imu_zero(){
 
 void imu_probe(){
     imu_read(data, &imu_data, &error_code);
-
+    imu_data.x_axis /= 16;
+    imu_data.y_axis /= 16;
+    imu_data.z_axis /= 16;
     snprintf(output_str, sizeof(output_str), "X: %d Y: %d Z: %d\r\n", 
         imu_data.x_axis+offset.x_axis, imu_data.y_axis+offset.y_axis, imu_data.z_axis+offset.z_axis);
     USART_Transmit((unsigned char*)output_str);

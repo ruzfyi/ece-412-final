@@ -7,9 +7,11 @@
 //#define F_CPU 16000000UL
 //#include <util/delay.h>
 #include "IMU.h"
+#include <math.h>
 
 #define width 240
 #define height 320
+#define PI 3.14
 
 //External Assembly commands
 void pinInit(void);
@@ -45,16 +47,20 @@ unsigned char yl2;
 unsigned char colorh;
 unsigned char colorl;
 
-int yaw = 0;
+float yaw = 0;
 int pitch = 0;
 int roll = 0;
+
+float pyaw = 0;
+int ppitch = 0;
+int proll = 0;
 
 void main(void) {
     imu_startup();
     //imu_zero();
-    offset.x_axis = 0;
+    /*offset.x_axis = 0;
     offset.y_axis = 0;
-    offset.z_axis = 0;
+    offset.z_axis = 0*/
     imu_probe();
     
     pinInit();
@@ -94,8 +100,13 @@ void main(void) {
         //_delay_ms(50);
         imu_probe();
         clampScale(imu_data.x_axis,imu_data.y_axis,imu_data.z_axis);
-        paintBlock(pitch,yaw,0,0,255,0,0);
-        paintBlock(pitch,yaw,0,0,255,255,255);
+        paintBlock(proll+(width/2),ppitch+(height/2),0,0,255,255,255);
+        function(tan(pyaw+PI/2),0);
+        paintBlock(roll+(width/2),pitch+(height/2),0,0,0,0,0);
+        function(tan(yaw+PI/2),0);
+        proll=roll;
+        ppitch=pitch;
+        pyaw=yaw;
         //paintBackground(255,255,255);
     }
     return;
@@ -171,7 +182,7 @@ void colorWhite(){
 }
 
 void clampScale(int16_t gyrox,int16_t gyroy,int16_t gyroz){
-    yaw = (gyrox)*(width/5760);
-    pitch = (gyroy+90) * (height/180.0);
-    roll = (gyroz+5000)*(360/10000.0);
+    yaw = (gyrox) * (PI/180);
+    pitch = (gyroy)*(height/90.0);
+    roll = (gyroz)*(width/180.0);
 }
